@@ -79,7 +79,7 @@ class TestSmokeTest():
     assert len(elements) > 0
     self.vars["sirLanceALot"] = self.driver.execute_script("document.getElementsByName(\'username\')[0].value=\'sirLanceALot\'")
     self.driver.find_element(By.ID, "password").click()
-    self.vars["Speermaster"] = self.driver.execute_script("document.getElementsByName(\'password\')[0].value=\'Speedmaster\'")
+    self.vars["Speermaster"] = self.driver.execute_script("document.getElementsByName(\'password\')[0].value=\'Speermaster\'")
     self.driver.find_element(By.CSS_SELECTOR, ".mysubmit:nth-child(4)").click()
     WebDriverWait(self.driver, 30).until(expected_conditions.text_to_be_present_in_element((By.CSS_SELECTOR, ".errorMessage"), "Invalid username and password."))
   
