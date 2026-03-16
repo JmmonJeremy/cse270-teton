@@ -23,7 +23,7 @@ class TestSmokeTest():
     self.driver.quit()
   
   def test_1NameandLogoTest(self):
-    self.driver.get("http://127.0.0.1:5500/cse270-teton/teton/1.6/index.html")
+    self.driver.get("http://127.0.0.1:5500/teton/1.6/index.html")
     self.driver.set_window_size(1936, 1176)
     self.driver.find_element(By.LINK_TEXT, "Home").click()
     elements = self.driver.find_elements(By.CSS_SELECTOR, ".header-logo img")
@@ -33,7 +33,7 @@ class TestSmokeTest():
     assert self.driver.title == "Teton Idaho CoC"
   
   def test_2HomePageTest(self):
-    self.driver.get("http://127.0.0.1:5500/cse270-teton/teton/1.6/index.html")
+    self.driver.get("http://127.0.0.1:5500/teton/1.6/index.html")
     self.driver.set_window_size(1936, 1176)
     self.driver.find_element(By.LINK_TEXT, "Home").click()
     elements = self.driver.find_elements(By.CSS_SELECTOR, ".spotlight1 > .centered-image")
@@ -46,7 +46,7 @@ class TestSmokeTest():
     assert self.driver.find_element(By.CSS_SELECTOR, "section > h3").text == "Welcome to the Teton Chamber of Commerce Signup Wizard!"
   
   def test_3DirectoryPageTest(self):
-    self.driver.get("http://127.0.0.1:5500/cse270-teton/teton/1.6/index.html")
+    self.driver.get("http://127.0.0.1:5500/teton/1.6/index.html")
     self.driver.set_window_size(1936, 1176)
     self.driver.find_element(By.LINK_TEXT, "Directory").click()
     self.driver.find_element(By.ID, "directory-grid").click()
@@ -55,7 +55,7 @@ class TestSmokeTest():
     assert self.driver.find_element(By.CSS_SELECTOR, ".gold-member:nth-child(9) > p:nth-child(2)").text == "Teton Turf and Tree"
   
   def test_4JoinPageTest(self):
-    self.driver.get("http://127.0.0.1:5500/cse270-teton/teton/1.6/index.html")
+    self.driver.get("http://127.0.0.1:5500/teton/1.6/index.html")
     self.driver.set_window_size(1936, 1176)
     self.driver.find_element(By.LINK_TEXT, "Join").click()
     elements = self.driver.find_elements(By.NAME, "fname")
@@ -72,7 +72,7 @@ class TestSmokeTest():
     assert len(elements) > 0
   
   def test_5AdminPageTest(self):
-    self.driver.get("http://127.0.0.1:5500/cse270-teton/teton/1.6/index.html")
+    self.driver.get("http://127.0.0.1:5500/teton/1.6/index.html")
     self.driver.set_window_size(1936, 1176)
     self.driver.find_element(By.LINK_TEXT, "Admin").click()
     elements = self.driver.find_elements(By.ID, "username")
